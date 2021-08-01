@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zBl9KkCz4wNfyI0NigFMHVl4rPG1pf3i90Pt4YZsdoqORnIXERzQIr3OhcvcYy0ibXtBHz9pwczjrtku9e423A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512"
+  ],
+  "logs": []
+}
