@@ -17,6 +17,7 @@ pipeline {
                 dir ("myproject") {
                  bat " dotnet build"
                  bat " dotnet test"
+                 bat " dotnet run "
                    
                 }
             }
