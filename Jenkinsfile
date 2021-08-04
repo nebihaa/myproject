@@ -7,11 +7,6 @@ pipeline {
             }
 
         }
-        stage("clone repo") {
-            steps {
-                bat " git clone https://github.com/nebihaa/myproject.git"
-            }
-        }
         stage("build") {
             steps {
                 dir ("myproject") {
