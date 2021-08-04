@@ -10,8 +10,8 @@ pipeline {
         stage("build") {
             steps {
                 dir ("myproject") {
-                 bat " dotnet build"
-                 bat " dotnet test"
+                 sh " dotnet build " ConsolApp1.csproj" "
+                 
                    
                 }
             }
