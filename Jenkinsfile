@@ -9,7 +9,7 @@ pipeline {
         }
         stage('checkout') {
             steps{
-                checkout([ $class: 'GitSCM', branches: [[ name '*/master' ]], userRemoteConfigs [[ url:'https://github.com/nebihaa/myproject.git']]])
+                checkout([ $class: 'GitSCM', branches: [[ name: '*/master' ]], userRemoteConfigs [[ url:'https://github.com/nebihaa/myproject.git']]])
             }
         }
         stage('build') {
