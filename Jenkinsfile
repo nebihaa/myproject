@@ -1,8 +1,22 @@
-node {
-    stage('build') {
-        git 'https://github.com/nebihaa/myproject.git'
-        def dotapp = docker.build ' my-docker-app '
-        dotapp.run()
+pipeline {
+    agent any 
+    stages{
+        stage('clean') {
+            steps{
+                cleanedWs()
+                echo ' cleaned workspace for project ' 
+            }
+        }
+        stage('checkout') {
+            steps{
+                checkout([ $class: 'GitSCM', branches: [[ name '*/master' ]], userRemoteConfigs [[ url:'https://github.com/nebihaa/myproject.git']]])
+            }
+        }
+        stage('build') {
+            stesp{
+                def dotnetContainer = docker.build'dotnetImage'
+                dotnetContainer.run()
+            }
         }
     }
-
+}
