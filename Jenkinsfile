@@ -14,8 +14,8 @@ pipeline {
             }
         }
         stage('build') {
-            steps{
-            scripts{
+         steps{
+            script{
                 def dotnetContainer = docker.build'dotnetImage'
                 dotnetContainer.run()
               }
