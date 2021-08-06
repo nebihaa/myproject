@@ -14,10 +14,11 @@ pipeline {
             }
         }
         stage('build') {
+            scripts{
             
                 def dotnetContainer = docker.build'dotnetImage'
                 dotnetContainer.run()
-            
+            }
         }
     }
 }
