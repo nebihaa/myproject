@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('clean') {
             steps{
-                cleanedWs()
+                cleanWs()
                 echo ' cleaned workspace for project ' 
             }
         }
